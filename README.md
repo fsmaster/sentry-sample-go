@@ -67,6 +67,9 @@ Go binaries keep function names and file:line, Sentry shows frames without symbo
 not sent with the event, so there is no code inline, but with GitHub integration + code mapping
 (`/src/` → repo root here) each frame has a link to the line on GitHub.
 
+`/trigger` also takes an optional `"dsn"` in the body. The playground sends it when a visitor checks
+**Use my DSN**, then only this one event goes to their project (a separate client, the global one is untouched).
+
 ## Troubleshooting
 
 | Symptom | Why |
